@@ -295,8 +295,6 @@ class Test_001_Login:
         self.lp.setRegEmail(username.lower())
         self.lp.setRegPassword(self.password)
         self.lp.clickRegister()
-        self.lp.clickRegister()
-        time.sleep(5)
         act_msg = self.dp.gettextDashboard()
         print(act_msg)
         if act_msg == "Dashboard":
