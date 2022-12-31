@@ -1,7 +1,9 @@
 from selenium.webdriver.common.by import By
+from selenium import webdriver
 
 
 class LoginPage:
+
     link_MyAccount_xpath = "//*[@id='menu-item-50']/a"
     textbox_Username_id = "username"
     textbox_Password_id = "password"
@@ -9,8 +11,9 @@ class LoginPage:
     textbox_EmailAddress_id = "reg_email"
     textbox_RegPassword_id = "reg_password"
     btn_Register_name = "register"
-    text_IncorrectMsg_xpath = "//*[@id='page-36']/div/div[1]/ul/li/strong[1]"
-    text_EmptyMsg_xpath = "//*[@id='page-36']/div/div[1]/ul/li"
+    text_IncorrectMsg_xpath = "//*[@id='page-36']/div/div[1]/ul"
+    text_EmptyMsg_xpath = "//*[@id='page-36']/div/div[1]/ul"
+    text_errormsg_xpath = "//*[@id='page-36']/div/div[1]/ul/li"
 
     def __init__(self, driver):
         self.driver = driver
@@ -25,6 +28,9 @@ class LoginPage:
     def setPassword(self, password):
         self.driver.find_element(by=By.ID, value=self.textbox_Password_id).clear()
         self.driver.find_element(by=By.ID, value=self.textbox_Password_id).send_keys(password)
+
+    def gettextPassword(self):
+        return self.driver.find_element(by=By.ID, value=self.textbox_Password_id).get_attribute('type')
 
     def clickLogin(self):
         self.driver.find_element(by=By.NAME, value=self.btn_Login_name).click()
@@ -41,7 +47,10 @@ class LoginPage:
         self.driver.find_element(by=By.NAME, value=self.btn_Register_name).click()
 
     def getMsg(self):
-        self.driver.find_element(by=By.XPATH, value=self.text_IncorrectMsg_xpath).text
+        return self.driver.find_element(by=By.XPATH, value=self.text_IncorrectMsg_xpath).text
 
     def getEmptyPasswordMsg(self):
-        self.driver.find_element(by=By.XPATH, value=self.text_EmptyMsg_xpath).text
+        return self.driver.find_element(by=By.XPATH, value=self.text_EmptyMsg_xpath).text
+
+    def getErrorMsg(self):
+        return self.driver.find_element(by=By.XPATH, value=self.text_errormsg_xpath).text

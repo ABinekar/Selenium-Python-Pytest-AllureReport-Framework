@@ -8,7 +8,7 @@ class DashboardPage:
     def __init__(self, driver):
         self.driver = driver
 
-    def getDashboard(self):
-        self.driver.find_element(by=By.XPATH, value=self.link_Dashboard_xpath).text
+    def gettextDashboard(self):
+        return self.driver.find_element(by=By.XPATH, value=self.link_Dashboard_xpath).text
 
 
