@@ -1,8 +1,7 @@
-12302022 08:29:47 PM : INFO : ************* Login test started ***********
-12302022 08:29:47 PM : INFO : ====== WebDriver manager ======
-12302022 08:30:31 PM : INFO : Get LATEST chromedriver version for google-chrome 108.0.5359
-12302022 08:30:34 PM : INFO : There is no [win32] chromedriver for browser 108.0.5359 in cache
-12302022 08:30:34 PM : INFO : About to download new driver from https://chromedriver.storage.googleapis.com/108.0.5359.71/chromedriver_win32.zip
-12302022 08:30:40 PM : INFO : Driver has been saved in cache [C:\Users\admin\.wdm\drivers\chromedriver\win32\108.0.5359]
-12302022 08:31:15 PM : INFO : ***** Test_001 Register User test started *****
-12302022 08:31:59 PM : INFO : ***** Home page title is matched *****
+12312022 07:31:32 PM : INFO : ************* Login test started ***********
+12312022 07:31:32 PM : INFO : ====== WebDriver manager ======
+12312022 07:31:43 PM : INFO : Get LATEST chromedriver version for google-chrome 108.0.5359
+12312022 07:31:46 PM : INFO : Driver [C:\Users\admin\.wdm\drivers\chromedriver\win32\108.0.5359\chromedriver.exe] found in cache
+12312022 07:32:02 PM : INFO : ***** Test_003 Log-in with correct username and empty password test started *****
+12312022 07:32:32 PM : INFO : ***** Home page title is matched *****
+12312022 07:32:38 PM : INFO : ***** User Login is successfully *****
